@@ -1,0 +1,177 @@
+project_name/
+│
+├── data/
+│   ├── raw/                 # Raw data
+│   ├── processed/           # Processed data
+│
+├── notebooks/               # Jupyter notebooks for exploration and experiments
+│
+├── src/
+│   ├── data/                # Data loading and preprocessing scripts
+│   ├── models/              # Model definitions and training scripts
+│   ├── utils/               # Utility functions and scripts
+│
+├── tests/                   # Unit tests
+│
+├── scripts/                 # Scripts for running the training, evaluation, etc.
+│
+├── logs/                    # Log files
+│
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+├── setup.py 
+
+
+#Training result
+179/179 - 506s - 3s/step - accuracy: 0.5835 - loss: 0.9596 - val_accuracy: 0.7145 - val_loss: 0.8550
+Epoch 2/10
+179/179 - 431s - 2s/step - accuracy: 0.7437 - loss: 0.6490 - val_accuracy: 0.7190 - val_loss: 0.9486
+Epoch 3/10
+179/179 - 429s - 2s/step - accuracy: 0.7901 - loss: 0.5325 - val_accuracy: 0.7175 - val_loss: 0.8692
+Epoch 4/10
+179/179 - 428s - 2s/step - accuracy: 0.8202 - loss: 0.4630 - val_accuracy: 0.8430 - val_loss: 0.5076
+Epoch 5/10
+179/179 - 427s - 2s/step - accuracy: 0.8454 - loss: 0.4007 - val_accuracy: 0.8296 - val_loss: 0.4267
+Epoch 6/10
+179/179 - 428s - 2s/step - accuracy: 0.8727 - loss: 0.3557 - val_accuracy: 0.8729 - val_loss: 0.3139
+Epoch 7/10
+179/179 - 426s - 2s/step - accuracy: 0.8769 - loss: 0.3257 - val_accuracy: 0.8505 - val_loss: 0.3970
+Epoch 8/10
+179/179 - 426s - 2s/step - accuracy: 0.8922 - loss: 0.2876 - val_accuracy: 0.9283 - val_loss: 0.2216
+Epoch 9/10
+179/179 - 427s - 2s/step - accuracy: 0.9095 - loss: 0.2544 - val_accuracy: 0.9178 - val_loss: 0.2453
+Epoch 10/10
+179/179 - 427s - 2s/step - accuracy: 0.9046 - loss: 0.2465 - val_accuracy: 0.9103 - val_loss: 0.2326
+
+
+#RESULT
+160/160 ━━━━━━━━━━━━━━━━━━━━ 651s 4s/step - accuracy: 0.7340 - loss: 1.4060 - val_accuracy: 0.4150 - val_loss: 2.3072 - learning_rate: 1.0000e-04
+Epoch 2/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 634s 4s/step - accuracy: 0.8358 - loss: 0.5562 - val_accuracy: 0.6890 - val_loss: 1.1537 - learning_rate: 1.0000e-04
+Epoch 3/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 635s 4s/step - accuracy: 0.8649 - loss: 0.4428 - val_accuracy: 0.8898 - val_loss: 0.3798 - learning_rate: 1.0000e-04
+Epoch 4/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 632s 4s/step - accuracy: 0.8807 - loss: 0.3912 - val_accuracy: 0.9268 - val_loss: 0.2679 - learning_rate: 1.0000e-04
+Epoch 5/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 633s 4s/step - accuracy: 0.8810 - loss: 0.4141 - val_accuracy: 0.9543 - val_loss: 0.1872 - learning_rate: 1.0000e-04
+Epoch 6/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 630s 4s/step - accuracy: 0.8900 - loss: 0.3647 - val_accuracy: 0.9339 - val_loss: 0.2302 - learning_rate: 1.0000e-04
+Epoch 7/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 0s 4s/step - accuracy: 0.8904 - loss: 0.3647   
+Epoch 7: ReduceLROnPlateau reducing learning rate to 4.999999873689376e-05.
+160/160 ━━━━━━━━━━━━━━━━━━━━ 633s 4s/step - accuracy: 0.8904 - loss: 0.3647 - val_accuracy: 0.8039 - val_loss: 0.5370 - learning_rate: 5.0000e-05
+Epoch 8/20
+160/160 ━━━━━━━━━━━━━━━━━━━━ 630s 4s/step - accuracy: 0.9039 - loss: 0.3285 - val_accuracy: 0.9402 - val_loss: 0.2199 - learning_rate: 5.0000e-05
+Epoch 8: early stopping
+Restoring model weights from the end of the best epoch: 5.
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+25/25 ━━━━━━━━━━━━━━━━━━━━ 22s 811ms/step
+25/25 - 20s - 818ms/step - accuracy: 0.7691 - loss: 0.6718
+Test Loss: 0.6718429923057556
+Test Accuracy: 0.7691310048103333
+25/25 ━━━━━━━━━━━━━━━━━━━━ 20s 767ms/step
+Classification Report:
+               precision    recall  f1-score   support
+
+      COVID19       0.85      0.88      0.87       106
+       NORMAL       0.99      0.31      0.47       234
+    PNEUMONIA       0.72      0.99      0.83       390
+TURBERCULOSIS       0.83      0.98      0.90        41
+
+     accuracy                           0.77       771
+    macro avg       0.85      0.79      0.77       771
+ weighted avg       0.82      0.77      0.73       771
+
+Confusion Matrix:
+[[ 93   0   7   6]
+ [ 14  72 146   2]
+ [  1   1 388   0]
+ [  1   0   0  40]]
+Accuracy: 0.7691309987029832
+Precision: 0.8237429384869138
+Recall: 0.7691309987029832
+F1 Score: 0.730719887446216
+ROC-AUC Score: 0.9720527425337593
+0.7691310048103333                precision    recall  f1-score   support
+
+      COVID19       0.85      0.88      0.87       106
+       NORMAL       0.99      0.31      0.47       234
+    PNEUMONIA       0.72      0.99      0.83       390
+TURBERCULOSIS       0.83      0.98      0.90        41
+
+     accuracy                           0.77       771
+    macro avg       0.85      0.79      0.77       771
+ weighted avg       0.82      0.77      0.73       771
+ 0.7691309987029832 0.8237429384869138 0.7691309987029832 0.730719887446216 0.9720527425337593
+Confusion Matrix:
+[[ 93   0   7   6]
+ [ 14  72 146   2]
+ [  1   1 388   0]
+ [  1   0   0  40]]
+
+ 100/100 ━━━━━━━━━━━━━━━━━━━━ 423s 4s/step - accuracy: 0.6766 - loss: 1.8460 - val_accuracy: 0.3879 - val_loss: 3.3859 - learning_rate: 1.0000e-04
+Epoch 2/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 407s 4s/step - accuracy: 0.8084 - loss: 0.6196 - val_accuracy: 0.3841 - val_loss: 5.1315 - learning_rate: 1.0000e-04
+Epoch 3/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 0s 4s/step - accuracy: 0.8178 - loss: 0.5930    
+Epoch 3: ReduceLROnPlateau reducing learning rate to 4.999999873689376e-05.
+100/100 ━━━━━━━━━━━━━━━━━━━━ 397s 4s/step - accuracy: 0.8178 - loss: 0.5927 - val_accuracy: 0.4987 - val_loss: 4.6690 - learning_rate: 5.0000e-05
+Epoch 4/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 390s 4s/step - accuracy: 0.8410 - loss: 0.5420 - val_accuracy: 0.6474 - val_loss: 1.1833 - learning_rate: 5.0000e-05
+Epoch 5/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 395s 4s/step - accuracy: 0.8796 - loss: 0.4133 - val_accuracy: 0.7683 - val_loss: 0.5589 - learning_rate: 5.0000e-05
+Epoch 6/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 394s 4s/step - accuracy: 0.8782 - loss: 0.3877 - val_accuracy: 0.9005 - val_loss: 0.3211 - learning_rate: 5.0000e-05
+Epoch 7/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 409s 4s/step - accuracy: 0.8757 - loss: 0.4173 - val_accuracy: 0.9458 - val_loss: 0.1868 - learning_rate: 5.0000e-05
+Epoch 8/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 412s 4s/step - accuracy: 0.8762 - loss: 0.4086 - val_accuracy: 0.9144 - val_loss: 0.2532 - learning_rate: 5.0000e-05
+Epoch 9/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 0s 4s/step - accuracy: 0.8760 - loss: 0.3905    
+Epoch 9: ReduceLROnPlateau reducing learning rate to 2.499999936844688e-05.
+100/100 ━━━━━━━━━━━━━━━━━━━━ 416s 4s/step - accuracy: 0.8761 - loss: 0.3904 - val_accuracy: 0.9194 - val_loss: 0.2331 - learning_rate: 2.5000e-05
+Epoch 10/20
+100/100 ━━━━━━━━━━━━━━━━━━━━ 409s 4s/step - accuracy: 0.9033 - loss: 0.3772 - val_accuracy: 0.8892 - val_loss: 0.3057 - learning_rate: 2.5000e-05
+Epoch 10: early stopping
+
+
+#result
+92/92 ━━━━━━━━━━━━━━━━━━━━ 490s 5s/step - accuracy: 0.6588 - loss: 1.8197 - val_accuracy: 0.3270 - val_loss: 6.7144 - learning_rate: 1.0000e-04
+Epoch 2/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 584s 6s/step - accuracy: 0.8072 - loss: 0.6266 - val_accuracy: 0.5518 - val_loss: 3.4992 - learning_rate: 1.0000e-04
+Epoch 3/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 490s 5s/step - accuracy: 0.8336 - loss: 0.5457 - val_accuracy: 0.5150 - val_loss: 3.3785 - learning_rate: 1.0000e-04
+Epoch 4/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 500s 5s/step - accuracy: 0.8579 - loss: 0.4806 - val_accuracy: 0.5191 - val_loss: 3.1958 - learning_rate: 1.0000e-04
+Epoch 5/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 414s 4s/step - accuracy: 0.8611 - loss: 0.4555 - val_accuracy: 0.5463 - val_loss: 1.8972 - learning_rate: 1.0000e-04
+Epoch 6/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 495s 5s/step - accuracy: 0.8702 - loss: 0.4496 - val_accuracy: 0.8719 - val_loss: 0.4658 - learning_rate: 1.0000e-04
+Epoch 7/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 402s 4s/step - accuracy: 0.8657 - loss: 0.4287 - val_accuracy: 0.9087 - val_loss: 0.3709 - learning_rate: 1.0000e-04
+Epoch 8/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 364s 4s/step - accuracy: 0.8789 - loss: 0.4171 - val_accuracy: 0.9005 - val_loss: 0.3286 - learning_rate: 1.0000e-04
+Epoch 9/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 548s 6s/step - accuracy: 0.8809 - loss: 0.3833 - val_accuracy: 0.9223 - val_loss: 0.2556 - learning_rate: 1.0000e-04
+Epoch 10/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 616s 7s/step - accuracy: 0.8740 - loss: 0.4085 - val_accuracy: 0.9482 - val_loss: 0.1986 - learning_rate: 1.0000e-04
+Epoch 11/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 527s 6s/step - accuracy: 0.8962 - loss: 0.3503 - val_accuracy: 0.9537 - val_loss: 0.1939 - learning_rate: 9.0484e-05
+Epoch 12/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 382s 4s/step - accuracy: 0.8950 - loss: 0.3452 - val_accuracy: 0.7888 - val_loss: 0.5504 - learning_rate: 8.1873e-05
+Epoch 13/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 365s 4s/step - accuracy: 0.9030 - loss: 0.3447 - val_accuracy: 0.9591 - val_loss: 0.1762 - learning_rate: 7.4082e-05
+Epoch 14/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 364s 4s/step - accuracy: 0.8960 - loss: 0.3445 - val_accuracy: 0.9591 - val_loss: 0.1741 - learning_rate: 6.7032e-05
+Epoch 15/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 362s 4s/step - accuracy: 0.9059 - loss: 0.3139 - val_accuracy: 0.9482 - val_loss: 0.2082 - learning_rate: 6.0653e-05
+Epoch 16/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 362s 4s/step - accuracy: 0.9166 - loss: 0.2655 - val_accuracy: 0.9564 - val_loss: 0.1731 - learning_rate: 5.4881e-05
+Epoch 17/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 471s 5s/step - accuracy: 0.9161 - loss: 0.3098 - val_accuracy: 0.9087 - val_loss: 0.2874 - learning_rate: 4.9659e-05
+Epoch 18/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 0s 6s/step - accuracy: 0.9161 - loss: 0.2847    
+Epoch 18: ReduceLROnPlateau reducing learning rate to 2.2466452719527297e-05.
+92/92 ━━━━━━━━━━━━━━━━━━━━ 580s 6s/step - accuracy: 0.9161 - loss: 0.2847 - val_accuracy: 0.8801 - val_loss: 0.3673 - learning_rate: 2.2466e-05
+Epoch 19/20
+92/92 ━━━━━━━━━━━━━━━━━━━━ 580s 6s/step - accuracy: 0.9337 - loss: 0.2512 - val_accuracy: 0.9169 - val_loss: 0.2564 - learning_rate: 2.0328e-05
