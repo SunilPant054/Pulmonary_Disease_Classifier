@@ -38,7 +38,7 @@ def sample_images(input_dir, output_dir, num_images):
 
 if __name__ == "__main__":
     # Usage example
-    input_directory = '/home/pneuma/Desktop/ML/Deep Learning/Pulomonary_Disease_Classification/PNEUMONIA_FULL'
-    output_directory = '/home/pneuma/Desktop/ML/Deep Learning/Pulomonary_Disease_Classification/dataset/train/PNEUMONIA'
-    number_of_images = 1200  # Number of images to sample
+    input_directory = '/home/pneuma/Desktop/ML/Deep Learning/PulmonaryDiseaseClassifier/PNEUMONIA_FULL'
+    output_directory = '/home/pneuma/Desktop/ML/Deep Learning/PulmonaryDiseaseClassifier/dataset/train/PNEUMONIA'
+    number_of_images = 1300  # Number of images to sample
     sample_images(input_directory, output_directory, number_of_images)

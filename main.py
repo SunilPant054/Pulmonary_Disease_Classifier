@@ -10,8 +10,8 @@ import os
 
 class Main:
     def __init__(self):
-        self.base_dir = "/home/pneuma/Desktop/ML/Deep Learning/Pulomonary_Disease_Classification/dataset/"
-        self.model_path = "/home/pneuma/Desktop/ML/Deep Learning/Pulomonary_Disease_Classification/model.h5"
+        self.base_dir = "/home/pneuma/Desktop/ML/Deep Learning/PulmonaryDiseaseClassifier/dataset/"
+        self.model_path = "/home/pneuma/Desktop/ML/Deep Learning/PulmonaryDiseaseClassifier/model.h5"
         self.data_loader = DataLoader(
             self.base_dir, val_split=0.2, batch_size=32)
         print("Loading data...")
