@@ -43,7 +43,7 @@ class Main:
         m1 = ClassifierModel()
         self.model = m1.network()
         fit = TrainNetwork(self.train, self.val)
-        self.model, history = fit.train_model(self.model)
+        self.model, self.history = fit.train_model(self.model)
         self.model.save(self.model_path)
 
     def evaluate_model(self):
@@ -81,7 +81,7 @@ class Main:
         while True:
             print("\n*** Pulmonary Disease Classification Menu ***")
             print("1. Load or Train Model")
-            print("2. Predict on Training Data")
+            print("2. Predict on Test Data")
             print("3. Evaluate Model")
             print("4. Start User Interface")
             print("5. Exit")
