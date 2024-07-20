@@ -36,9 +36,9 @@ class ClassifierModel:
         model.add(layers.MaxPooling2D(2, 2))
         
         model.add(layers.Flatten())
-        model.add(layers.Dropout(0.5))  # Increase dropout rate to 0.5
-        model.add(layers.Dense(128, activation='relu', kernel_regularizer=l2(0.0001)))
-        model.add(layers.Dropout(0.5))  # Additional dropout layer with 0.5 rate
+        model.add(layers.Dropout(0.5))  
+        model.add(layers.Dense(256, activation='relu', kernel_regularizer=l2(0.0001)))
+        model.add(layers.Dropout(0.5))  
         model.add(layers.Dense(4, activation='softmax'))
 
         model.compile(
